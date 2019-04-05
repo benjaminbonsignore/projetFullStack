@@ -14,3 +14,20 @@
 Route::get('/', function () {
     return view('welcome');
 });
+    
+    Route::get('/ecommerce', function () {
+        return view('ecommerce');
+    });
+    
+        Route::get('/inscription', function () {
+            return view('auth/register');
+        });
+        
+            Auth::routes();
+            Route::get('/', 'HomeController@index')->name('home');
+        
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
