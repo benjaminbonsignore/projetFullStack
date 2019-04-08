@@ -13,6 +13,6 @@ class ContactController extends Controller
     
     public function store(ContactRequest $request)
     {
-        return view('confirm');
+        return redirect(route('accueil'));
     }
 }

@@ -1,3 +1,7 @@
+body{
+	background-color: white;
+}
+
 #main{
 	margin: 5em;
 	border: 1px solid grey;
@@ -18,7 +22,9 @@
 	padding: 3em;
 }
 
-#achat{
+.truc{
 	margin-left: 24em;
-	margin-top: 7em;
+	margin-top: 9em;
 }
+
+

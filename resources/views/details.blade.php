@@ -1,18 +1,22 @@
-    @extends('template')
-     
+    @extends('layouts.app')
+    
     @section('head')
     	<title>{{ $product->label }}</title>
      	<link rel="stylesheet" href="../css/detail.css">
     @endsection
-     
-    @section('contenu')
+    
+    @section('content')
         <div id='main'>
             <img id='imgDetail' src="../{{ $product->image }}" alt="image indisponible" >
             <div id='contenu'>
                 <h4>{{ $product->label }}</h4>
                 <br>
                 <p>{{ $product->longDescr }}</p>
-                <a id='achat' class="btn btn-danger">Acheter pour {{ $product->price }}€</a>
+                @auth
+                	<a class="truc btn btn-danger">Acheter pour {{ $product->price }}€</a>
+                @else
+                	<a href="{{route('login')}}" class="truc btn btn-success">Se connecter pour acheter</a>
+                @endauth
             </div>
         </div>
     @endsection
