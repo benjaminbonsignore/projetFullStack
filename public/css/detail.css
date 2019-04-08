@@ -1,0 +1,24 @@
+#main{
+	margin: 5em;
+	border: 1px solid grey;
+}
+
+#cardDetail {
+	width: 18em;
+	padding: 5em;
+	text-align: center;
+} 
+
+#imgDetail{
+	width: 50%;
+	float: left;
+}
+
+#contenu{
+	padding: 3em;
+}
+
+#achat{
+	margin-left: 24em;
+	margin-top: 7em;
+}

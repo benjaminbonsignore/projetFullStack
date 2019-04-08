@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\WelcomeController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,6 +13,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'WelcomeController@index');
+
+Route::get('home', 'ProductController@index')->name('home');
+
+Route::get('/detail/{n}', 'ProductController@show')->where('n','[0-9]+')->name('detail');
+
+
+
+    
