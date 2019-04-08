@@ -2,9 +2,8 @@
 
 namespace Tests\Feature;
 
+use App\Product;
 use Tests\TestCase;
-use Illuminate\Foundation\Testing\WithFaker;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class ShowProductsTest extends TestCase
 {

@@ -14,20 +14,23 @@
 Route::get('/', function () {
     return view('welcome');
 });
+  /*-------------------------------*/ 
     
-    Route::get('/ecommerce', function () {
-        return view('ecommerce');
-    });
+    Route::get('/contact', [
+        'uses' => 'ContactMessageController@create'
+    ])->name('contactG');
     
+    Route::post('/contact', [
+        'uses' => 'ContactMessageController@store',
+        'as' => '/contact.store'
+    ]);
+    /*-------------------------------*/
         Route::get('/inscription', function () {
             return view('auth/register');
         });
-        
+        /*------------------------------*/
             Auth::routes();
             Route::get('/', 'HomeController@index')->name('home');
-        
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+        /*----------------------------------*/
 
 

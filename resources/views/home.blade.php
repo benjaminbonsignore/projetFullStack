@@ -7,7 +7,7 @@
 <meta charset="utf-8" />
 <title rel="shortcut icon" type="images/x-icon" href="../img/autre/logo.png">iphone-DTA</title>
 <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 
 
@@ -17,15 +17,14 @@
 <div class="top-bar-left">
     
         <ul class="menu menu-hover-lines">
-            <li><a href="ecommerce.php">Accueil</a></li>
+            <li><a href="">Accueil</a></li>
             <li><a href="register">inscription/connexion</a></li>
-            <li><a href="service.php">Nos Services</a></li>
+            <li><a href="service">Nos Services</a></li>
             <li><a href="#">Catégorie</a></li>
 
             <li><a href="panier/index.php">Panier</a></li>
         </ul>
 </div>
-            <input type="search" name="search" placeholder="recherche" class="animated-search-form">
 
 
 
@@ -36,7 +35,6 @@
     
         <div class="hero-section-text">
                 <h1>Lequel choisirez‑vous ?</h1>
-               <button class="button" >En savoir plus ?</button>
         </div>
     
 </div>
@@ -83,9 +81,9 @@
     
     <hr>
     
-<div class="row column">
+<div class="row column" style="justify-content: center;">
         <div class="callout primary">
-        <h3><center>Venez découvrir notre offre exeptionnel</center></h3>
+        <h3>Venez découvrir notre offre exeptionnel</h3>
 </div>
 </div>
     <hr>
@@ -178,10 +176,6 @@
     </div>
     
 </footer>
-
-
-
-
 
 <!----------------------------FOOTER------------------------>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
