@@ -70,15 +70,37 @@
             	transform: scale(1.1);
             	z-index: 2;
             }
+            
+           
+            
+            header {
+    height: 360px;
+    z-index: 10;
+}
+.header-banner {
+    background-image: url('https://www.cooktour.com/wp-content/uploads/2018/10/iphone-app-header-background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 500px;
+}
+            
         </style>
     	
         <link href="../css/detail.css" rel="stylesheet">
-    @endsection
-    </head>
+        
+        
+@endsection
+
+		<header>
+    <div class="header-banner">
+</header>
+
     <body>
     <?php $cpt = 0;?>
     	@section('content')
-    		<h2>Notre sélection de smartphones !</h2>	
+    		<h2 style="margin-top:100px;">Notre sélection de smartphones !</h2>	
 			<div class="card-deck">
                 @foreach($products as $product)
                 <?php $cpt++;?>    		
@@ -97,6 +119,27 @@
                	@endforeach
             </div>
             <!-- <ul style="display: flex; justify-content: space-around; margin-top: 4em;"></ul> -->
+            
+            <?php $cpt = 0;?>
+    	@section('content')
+    		<h2 >Notre sélection de Iphone !</h2>	
+			<div class="card-deck">
+                @foreach($products as $product)
+                <?php $cpt++;?>    		
+                    	<div class="card bloc" style="width: 18rem; text-align: center; margin-top: 1em;">
+                           <img src="{{ $product->image }}" class="card-img-top" alt="image indisponible" style="margin-left: auto; margin-right: auto; width: 70%;">
+                           <div class="card-body">
+                              <h5 class="card-title">{{ $product->label }}</h5>
+                              <h6 class="card-title">{{ $product->price }}€</h6>
+                              <p class="card-text">{{ $product->description }}</p>
+                              <a href="{{ route('detail',[$product->id]) }}" class="btn btn-primary">Détails</a>
+                            </div>
+        				</div>
+        				<?php if($cpt == 4){?>
+        				<div class="w-100"></div>
+        				<?php } ?>	
+               	@endforeach
+            </div>
         @endsection
     </body>
 </html>

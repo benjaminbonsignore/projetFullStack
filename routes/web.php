@@ -25,5 +25,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/contact', 'ContactController@index');
-Route::post('/contact', 'ContactController@store');
+Route::get('/contact', [
+    'uses' => 'ContactMessageController@create'
+]);
+
+Route::post('/contact', [
+    'uses' => 'ContactMessageController@store',
+    'as' => '/contact.store'
+]);
