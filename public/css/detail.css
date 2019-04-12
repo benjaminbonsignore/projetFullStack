@@ -14,8 +14,9 @@ body{
 } 
 
 #imgDetail{
-	width: 50%;
-	float: left;
+    display:flex;
+    max-width: 800px;
+    
 }
 
 #contenu{

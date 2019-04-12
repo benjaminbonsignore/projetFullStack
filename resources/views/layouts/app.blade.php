@@ -11,9 +11,50 @@
     @yield('head')
 </head>
 <body>
+<style>
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  color: white;
+  }
+
+.dropdown-content {
+  z-index:1;
+  display: none;
+  position: absolute;
+  background-color: #fffff;
+  min-width: 160px;
+  background:darkgray;
+  border-radius: 15px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+     border-radius: 15px;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+</style>
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="{{ url('/') }}"><img src="{{ asset('img/logo.png') }}" width="50" height="50"></a>
-    <a class="navbar-brand" href="{{ url('/') }}">Accueil</a>
+   <div class="dropdown">
+  <a class="navbar-brand">Catégorie</a>
+  <div class="dropdown-content">
+    <a href="#">Samsung</a>
+    <a href="#">Iphone</a>
+    <a href="#">Nokia</a>
+    <a href="#">Sony</a>
+  </div>
+</div>
+    
     <a class="navbar-brand" href="contact">Contactez-nous</a>
     <a class="navbar-brand" href="">Panier</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
