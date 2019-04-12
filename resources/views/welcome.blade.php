@@ -76,22 +76,23 @@
     @endsection
     </head>
     <body>
-    <?php $cpt = 0;?>
+    
+    <?php $cpt = 0; ?>
     	@section('content')
     		<h2>Notre sélection de smartphones !</h2>	
 			<div class="card-deck">
                 @foreach($products as $product)
-                <?php $cpt++;?>    		
+                <?php $cpt++; ?>    		
                     	<div class="card bloc" style="width: 18rem; text-align: center; margin-top: 1em;">
                            <img src="{{ $product->image }}" class="card-img-top" alt="image indisponible" style="margin-left: auto; margin-right: auto; width: 70%;">
                            <div class="card-body">
                               <h5 class="card-title">{{ $product->label }}</h5>
                               <h6 class="card-title">{{ $product->price }}€</h6>
-                              <p class="card-text">{{ $product->description }}</p>
+                              <p class="card-text">{{ $product->descr }}</p>
                               <a href="{{ route('detail',[$product->id]) }}" class="btn btn-primary">Détails</a>
                             </div>
         				</div>
-        				<?php if($cpt == 4){?>
+        				<?php if($cpt == 4){ ?>
         				<div class="w-100"></div>
         				<?php } ?>	
                	@endforeach
