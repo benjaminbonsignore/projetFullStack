@@ -11,6 +11,7 @@
             @yield('head')
         </head>
         <body>
+        
             @yield('contenu')
         </body>
     </html>

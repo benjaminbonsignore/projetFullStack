@@ -1,0 +1,1 @@
+@include('back/partials/pannel', ['color' => 'red', 'icone' => 'comment', 'nbr' => $nbrComments, 'name' => trans('back/admin.new-comments'), 'url' => 'comment', 'total' => trans('back/admin.comments')])

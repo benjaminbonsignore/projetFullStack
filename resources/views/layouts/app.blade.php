@@ -24,8 +24,8 @@
             @guest
                 <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">@lang('Connexion')</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">@lang('Inscription')</a></li>
-            @else
-                <li class="nav-item">
+            @else            
+ 					 <li class="nav-item">
                     <a id="logout" class="nav-link" href="{{ route('logout') }}">@lang('Déconnexion')</a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hide">
                         {{ csrf_field() }}

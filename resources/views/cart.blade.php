@@ -116,10 +116,36 @@
             table#cart tfoot td{display:block; }
             table#cart tfoot td .btn{display:block;}    
         }
+        
+        body {
+            background-color: #c5cfe0;
+            }
+            
+            .container {
+                  position: absolute;
+                  top: 0;
+                  bottom: 0;
+                  left: 0;
+                  right: 0;
+                  max-width: 1000px;
+                  width: 90%;
+                  margin: auto;
+                  background: #fff;
+                  padding: 30px;
+                  border-style: solid;
+                  border-width: 15px;
+                  border-top-color: lighten(#000, 20%);
+                  border-right-color: lighten(#000, 0%);
+                  border-bottom-color: lighten(#000, 20%);
+                  border-left-color: lighten(#000, 0%);
+                  box-shadow: 2px 2px 4px rgba(0,0,0,.6);
+}
         </style>
     @endsection
     
     @section('content')
+    
+    <div class="container">
         <table id="cart" class="table table-hover table-condensed">
         <thead>
         <tr>
@@ -165,4 +191,5 @@
         </tr>
         </tfoot>
     </table>
+    </div>
     @endsection
