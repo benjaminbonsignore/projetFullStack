@@ -145,7 +145,7 @@
             </td>
             <td data-th="Prix">{{ $cartValue->product->price }}€</td>
             <td data-th="Quantité">{{ $cartValue->quantity }}</td>
-            <td data-th="Sous-total" class="text-center">{{ ($cartValue->product->price) * ($cartValue->quantity) }}</td>
+            <td data-th="Sous-total" class="text-center">{{ ($cartValue->product->price) * ($cartValue->quantity) }}€</td>
             <td class="actions" data-th="">
                 <a href="./cart/deleteOne/{{ $cartValue->id }}"class="btn btn-danger btn-sm"><i class="fa fa-trash-o">Enlever un</i></a>
             	<a href="./cart/delete/{{ $cartValue->id }}"class="btn btn-danger btn-sm"><i class="fa fa-trash-o">Enlever tout</i></a>
@@ -155,11 +155,8 @@
         @endforeach
         </tbody>
         <tfoot>
-        <tr class="visible-xs">
-            <td class="text-center"><strong>Total <?php echo $total ?>€</strong></td>
-        </tr>
         <tr>
-            <td><a href="{{ url('/') }}" class="btn btn-warning"><i class="fa fa-angle-left"></i>Continuer les achats</a></td>
+            <td><a href="{{ url('/products') }}" class="btn btn-warning"><i class="fa fa-angle-left"></i>Continuer les achats</a></td>
             <td colspan="2" class="hidden-xs"></td>
             <td class="hidden-xs text-center"><strong>Total <?php echo $total ?>€</strong></td>
         </tr>

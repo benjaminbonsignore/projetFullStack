@@ -15,7 +15,8 @@ use App\Http\Controllers\WelcomeController;
 
 Route::get('/', 'ProductController@index')->name('accueil');
 
-//Route::get('accueil', 'ProductController@index')->name('accueil');
+Route::get('/products', 'ProductController@display');
+Route::get('/products/{n}', 'ProductController@filter');
 
 Route::get('/detail/{n}', 'ProductController@show')->where('n','[0-9]+')->name('detail');
 
@@ -28,7 +29,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-/*
-Route::get('/contact', 'ContactController@index');
-Route::post('/contact', 'ContactController@store');
-*/
+Route::get('/contact', [
+    'uses' => 'ContactMessageController@create'
+]);
+
+Route::post('/contact', [
+    'uses' => 'ContactMessageController@store',
+    'as' => '/contact.store'
+]);

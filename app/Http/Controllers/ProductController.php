@@ -15,9 +15,23 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
+        $products = Product::all()->where('highlight',1);
         
         return view('welcome')->with('products', $products);
+    }
+    
+    public function display()
+    {
+        $products = Product::all();
+        
+        return view('products')->with('products', $products);
+    }
+    
+    public function filter($value)
+    {
+        $products = Product::all()->where('mark',$value);
+        
+        return view('products')->with('products', $products);
     }
     
     /**

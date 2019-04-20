@@ -31,7 +31,7 @@ class CartController extends Controller
      */
     public function addToCart($id)
     {
-        $carts = Cart::where('product_id',$id)->first();
+        $carts = Cart::where('product_id',$id)->where('user_id',Auth::id())->first();
      
         if($carts === null)
         {
