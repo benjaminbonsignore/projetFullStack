@@ -118,7 +118,7 @@
         }
         
         body {
-            background-color: #c5cfe0;
+            background: url('img/11.jpg'); 
             }
             
             .container {
@@ -130,7 +130,7 @@
                   max-width: 1000px;
                   width: 90%;
                   margin: auto;
-                  background: #fff;
+                  background: #c0c2c6;
                   padding: 30px;
                   border-style: solid;
                   border-width: 15px;
@@ -185,7 +185,8 @@
             <td class="text-center"><strong>Total <?php echo $total ?>€</strong></td>
         </tr>
         <tr>
-            <td><a href="{{ url('/') }}" class="btn btn-warning"><i class="fa fa-angle-left"></i>Continuer les achats</a></td>
+            <td><a href="{{ url('/') }}" class="btn btn-primary"><i class="fa fa-angle-left"></i>Continuer les achats</a></td>
+            <td><a href="{{ url('/stripe') }}" class="btn btn-primary"><i class="fa fa-angle-left"></i>Procéder au paiement</a></td>
             <td colspan="2" class="hidden-xs"></td>
             <td class="hidden-xs text-center"><strong>Total <?php echo $total ?>€</strong></td>
         </tr>

@@ -39,6 +39,6 @@ class ContactUSController extends Controller
         ContactUS::create($request->all());
         
         
-        return back()->with('success', 'Thanks for contacting us!');
+        return back()->with('success', 'Merci pour votre message :-)');
     }
 }

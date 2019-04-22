@@ -125,7 +125,7 @@
         }
         
         body {
-            background: url('https://images4.alphacoders.com/809/809457.jpg');
+            background: url('img/11.jpg'); 
             }
                 
                 .container {
@@ -137,7 +137,7 @@
                   max-width: 1000px;
                   width: 90%;
                   margin: auto;
-                  background: #fff;
+                  background: #c0c2c6;
                   padding: 30px;
                   border-style: solid;
                   border-width: 15px;
